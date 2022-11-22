@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyMov : MonoBehaviour
 {
+    private GameManager gameManager;
     public NavMeshAgent navMeshAgent;
     public GameObject player;
     public GameObject[] destinations; // Usa un array de destinos para poder asignar tantos destinos como desees (excepto el jugador)
@@ -15,6 +16,7 @@ public class EnemyMov : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         currentTarget = destinations[currentDestination].transform.position; // Asigna el primer destino para empezar a moverse
     }
 
@@ -32,7 +34,9 @@ public class EnemyMov : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(player.transform.position, transform.position) < distanceToFollowPlayer) // Si el jugador está dentro de la distancia especificada para empezar a seguirlo ...
+
+        
+        if ((!gameManager.isDead) && (Vector3.Distance(player.transform.position, transform.position) < distanceToFollowPlayer) ) // Si el jugador está dentro de la distancia especificada para empezar a seguirlo ...
         {
             currentTarget = player.transform.position; // ... asigna como objetivo actual al jugador
         }

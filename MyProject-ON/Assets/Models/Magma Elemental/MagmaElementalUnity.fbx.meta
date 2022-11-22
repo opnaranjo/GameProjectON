@@ -1,0 +1,473 @@
+fileFormatVersion: 2
+guid: 5b4f683135a567640ac836e07189673d
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Bone
+  - first:
+      1: 100002
+    second: chest
+  - first:
+      1: 100004
+    second: Elemental
+  - first:
+      1: 100006
+    second: Fire Elemental
+  - first:
+      1: 100008
+    second: forearm.L
+  - first:
+      1: 100010
+    second: forearm.L.001
+  - first:
+      1: 100012
+    second: forearm.L.002
+  - first:
+      1: 100014
+    second: forearm.L.003
+  - first:
+      1: 100016
+    second: forearm.L.004
+  - first:
+      1: 100018
+    second: forearm.L.005
+  - first:
+      1: 100020
+    second: forearm.L.006
+  - first:
+      1: 100022
+    second: forearm.L.007
+  - first:
+      1: 100024
+    second: forearm.L.008
+  - first:
+      1: 100026
+    second: forearm.R
+  - first:
+      1: 100028
+    second: forearm.R.001
+  - first:
+      1: 100030
+    second: forearm.R.002
+  - first:
+      1: 100032
+    second: forearm.R.003
+  - first:
+      1: 100034
+    second: forearm.R.004
+  - first:
+      1: 100036
+    second: forearm.R.005
+  - first:
+      1: 100038
+    second: forearm.R.006
+  - first:
+      1: 100040
+    second: forearm.R.007
+  - first:
+      1: 100042
+    second: forearm.R.008
+  - first:
+      1: 100044
+    second: hips
+  - first:
+      1: 100046
+    second: //RootNode
+  - first:
+      1: 100048
+    second: shoulder.L
+  - first:
+      1: 100050
+    second: shoulder.R
+  - first:
+      1: 100052
+    second: spine
+  - first:
+      1: 100054
+    second: upper_arm.L
+  - first:
+      1: 100056
+    second: upper_arm.R
+  - first:
+      4: 400000
+    second: Bone
+  - first:
+      4: 400002
+    second: chest
+  - first:
+      4: 400004
+    second: Elemental
+  - first:
+      4: 400006
+    second: Fire Elemental
+  - first:
+      4: 400008
+    second: forearm.L
+  - first:
+      4: 400010
+    second: forearm.L.001
+  - first:
+      4: 400012
+    second: forearm.L.002
+  - first:
+      4: 400014
+    second: forearm.L.003
+  - first:
+      4: 400016
+    second: forearm.L.004
+  - first:
+      4: 400018
+    second: forearm.L.005
+  - first:
+      4: 400020
+    second: forearm.L.006
+  - first:
+      4: 400022
+    second: forearm.L.007
+  - first:
+      4: 400024
+    second: forearm.L.008
+  - first:
+      4: 400026
+    second: forearm.R
+  - first:
+      4: 400028
+    second: forearm.R.001
+  - first:
+      4: 400030
+    second: forearm.R.002
+  - first:
+      4: 400032
+    second: forearm.R.003
+  - first:
+      4: 400034
+    second: forearm.R.004
+  - first:
+      4: 400036
+    second: forearm.R.005
+  - first:
+      4: 400038
+    second: forearm.R.006
+  - first:
+      4: 400040
+    second: forearm.R.007
+  - first:
+      4: 400042
+    second: forearm.R.008
+  - first:
+      4: 400044
+    second: hips
+  - first:
+      4: 400046
+    second: //RootNode
+  - first:
+      4: 400048
+    second: shoulder.L
+  - first:
+      4: 400050
+    second: shoulder.R
+  - first:
+      4: 400052
+    second: spine
+  - first:
+      4: 400054
+    second: upper_arm.L
+  - first:
+      4: 400056
+    second: upper_arm.R
+  - first:
+      43: 4300000
+    second: Elemental
+  - first:
+      74: 7400000
+    second: Fire Elemental|Attack1
+  - first:
+      74: 7400002
+    second: Fire Elemental|Block
+  - first:
+      74: 7400004
+    second: Fire Elemental|deatch
+  - first:
+      74: 7400006
+    second: Fire Elemental|deatch2
+  - first:
+      74: 7400008
+    second: Fire Elemental|HandMagic
+  - first:
+      74: 7400010
+    second: Fire Elemental|Idle1
+  - first:
+      74: 7400012
+    second: Fire Elemental|Idle2
+  - first:
+      74: 7400014
+    second: Fire Elemental|Idle3
+  - first:
+      74: 7400016
+    second: Fire Elemental|MagicHand2
+  - first:
+      74: 7400018
+    second: Fire Elemental|Punch1
+  - first:
+      74: 7400020
+    second: Fire Elemental|Run
+  - first:
+      74: 7400022
+    second: Fire Elemental|Run2
+  - first:
+      74: 7400024
+    second: Elemental|Idle3
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Elemental
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: MagmaElementalUnity(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fire Elemental
+      parentName: MagmaElementalUnity(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hips
+      parentName: Fire Elemental
+      position: {x: -0.016987419, y: 0.102347106, z: 1.0670273}
+      rotation: {x: -0.025660057, y: -0.684264, z: -0.72842234, w: -0.022918938}
+      scale: {x: 0.9999996, y: 0.9999996, z: 0.9999994}
+    - name: spine
+      parentName: hips
+      position: {x: -9.313226e-10, y: 0.7090276, z: -0.0000000020954758}
+      rotation: {x: -0.070921406, y: -0.0003981274, z: 0.004997699, w: 0.99746937}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: chest
+      parentName: spine
+      position: {x: 0.0000000031432137, y: 0.58443904, z: -0.000000029220246}
+      rotation: {x: 0.0940828, y: -0.0007071522, z: -0.0063656494, w: 0.9955438}
+      scale: {x: 1.0000004, y: 0.99999994, z: 1.0000002}
+    - name: shoulder.L
+      parentName: chest
+      position: {x: -0.38514012, y: 1.4963515, z: -0.032536317}
+      rotation: {x: -0.49577817, y: 0.56133133, z: 0.5199017, w: 0.410869}
+      scale: {x: 1.0000004, y: 1.0000001, z: 0.99999994}
+    - name: upper_arm.L
+      parentName: shoulder.L
+      position: {x: -0.041662887, y: 0.6988773, z: 0.015477758}
+      rotation: {x: -0.02416813, y: -0.7333803, z: -0.013494566, w: 0.67925483}
+      scale: {x: 0.99999994, y: 0.9999995, z: 1}
+    - name: forearm.L
+      parentName: upper_arm.L
+      position: {x: 0.0000000661239, y: 0.7269328, z: 0.00000007543713}
+      rotation: {x: 0.0023327235, y: -0.17042159, z: -0.006174282, w: 0.9853492}
+      scale: {x: 1.0000004, y: 1, z: 0.99999976}
+    - name: forearm.L.001
+      parentName: forearm.L
+      position: {x: 0.00000008940697, y: 1.4591415, z: 0.000000058673322}
+      rotation: {x: 0.12579475, y: 0.7558228, z: -0.12221041, w: 0.63085043}
+      scale: {x: 0.9999996, y: 1.0000015, z: 1.0000008}
+    - name: forearm.L.004
+      parentName: forearm.L.001
+      position: {x: 0.000000029802322, y: 0.40775517, z: 0.000000029802322}
+      rotation: {x: -0.29531303, y: 0.012291637, z: -0.19398887, w: 0.9354183}
+      scale: {x: 0.9999999, y: 1.0000012, z: 1.0000001}
+    - name: forearm.L.002
+      parentName: forearm.L
+      position: {x: 0.00000008940697, y: 1.4591415, z: 0.000000058673322}
+      rotation: {x: 0.09903398, y: 0.60076207, z: 0.116885535, w: 0.7846114}
+      scale: {x: 0.99999976, y: 1.0000002, z: 1.0000004}
+    - name: forearm.L.003
+      parentName: forearm.L.002
+      position: {x: 0.00000013038516, y: 0.27581427, z: 0.000000063329935}
+      rotation: {x: 0.2690862, y: 0.22622964, z: -0.031331547, w: 0.9356448}
+      scale: {x: 0.9999998, y: 1, z: 0.9999997}
+    - name: forearm.L.005
+      parentName: forearm.L
+      position: {x: 0.00000008940697, y: 1.4591415, z: 0.000000058673322}
+      rotation: {x: -0.038067997, y: 0.7832072, z: -0.17298949, w: 0.5959966}
+      scale: {x: 0.99999934, y: 1.0000008, z: 1}
+    - name: forearm.L.006
+      parentName: forearm.L.005
+      position: {x: -0.000000014901161, y: 0.36822182, z: 0.000000059604645}
+      rotation: {x: 0.18601279, y: 0.0014040765, z: 0.028331755, w: -0.9821378}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+    - name: forearm.L.007
+      parentName: forearm.L
+      position: {x: 0.00000008940697, y: 1.4591415, z: 0.000000058673322}
+      rotation: {x: -0.24224389, y: 0.7797386, z: -0.23255116, w: 0.52843696}
+      scale: {x: 1.0000001, y: 1.000001, z: 1.0000002}
+    - name: forearm.L.008
+      parentName: forearm.L.007
+      position: {x: -0.000000029802322, y: 0.34616435, z: -0.00000008940697}
+      rotation: {x: 0.22960499, y: 0.014040526, z: -0.1521683, w: -0.9612124}
+      scale: {x: 1, y: 1.0000004, z: 0.99999976}
+    - name: shoulder.R
+      parentName: chest
+      position: {x: 0.4432483, y: 1.5079464, z: -0.003965147}
+      rotation: {x: -0.7213981, y: -0.06896863, z: -0.6785785, w: 0.11983012}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1}
+    - name: upper_arm.R
+      parentName: shoulder.R
+      position: {x: -0, y: 0, z: 0.015293158}
+      rotation: {x: 0.4366044, y: 0.5485067, z: 0.4077675, w: 0.5850151}
+      scale: {x: 1.000001, y: 0.9999996, z: 1.0000007}
+    - name: forearm.R
+      parentName: upper_arm.R
+      position: {x: 0.000000480999, y: 0.7131859, z: -0.000000053085387}
+      rotation: {x: 0.03256051, y: 0.07792192, z: -0.0091245165, w: 0.9963858}
+      scale: {x: 0.99999934, y: 0.9999998, z: 0.9999996}
+    - name: forearm.R.001
+      parentName: forearm.R
+      position: {x: 0.000000007450581, y: 1.4577752, z: -0.000000014901161}
+      rotation: {x: -0.060132764, y: 0.76126164, z: -0.051090617, w: -0.6436261}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: forearm.R.004
+      parentName: forearm.R.001
+      position: {x: 0.000000044703484, y: 0.4085542, z: -0.000000029802322}
+      rotation: {x: -0.2890868, y: -0.011845076, z: 0.19919579, w: 0.93627435}
+      scale: {x: 1.0000005, y: 1.0000012, z: 1.0000004}
+    - name: forearm.R.002
+      parentName: forearm.R
+      position: {x: 0.000000007450581, y: 1.4577752, z: -0.000000014901161}
+      rotation: {x: -0.11251676, y: 0.64559853, z: 0.19793038, w: -0.7289486}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1}
+    - name: forearm.R.003
+      parentName: forearm.R.002
+      position: {x: -0.000000059604645, y: 0.27441707, z: 0.000000044703484}
+      rotation: {x: 0.10501179, y: -0.18956128, z: 0.14302784, w: 0.9657029}
+      scale: {x: 0.99999946, y: 0.99999934, z: 0.99999976}
+    - name: forearm.R.005
+      parentName: forearm.R
+      position: {x: 0.000000007450581, y: 1.4577752, z: -0.000000014901161}
+      rotation: {x: 0.036186367, y: 0.7769728, z: -0.18528928, w: -0.60055965}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: forearm.R.006
+      parentName: forearm.R.005
+      position: {x: -0.0000000055879354, y: 0.36822084, z: -0.00000004284084}
+      rotation: {x: -0.18601401, y: 0.00140503, z: 0.028331816, w: 0.98213756}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
+    - name: forearm.R.007
+      parentName: forearm.R
+      position: {x: 0.000000007450581, y: 1.4577752, z: -0.000000014901161}
+      rotation: {x: -0.23925038, y: -0.77507734, z: 0.2459377, w: 0.53059316}
+      scale: {x: 1.0000002, y: 1, z: 0.9999997}
+    - name: forearm.R.008
+      parentName: forearm.R.007
+      position: {x: 0.00000006239861, y: 0.34616315, z: -0.00000010058284}
+      rotation: {x: 0.22960642, y: -0.014040705, z: 0.1521692, w: -0.9612119}
+      scale: {x: 0.9999996, y: 1, z: 0.9999994}
+    - name: Bone
+      parentName: chest
+      position: {x: 9.313226e-10, y: 1.4203454, z: -0.0000000084983185}
+      rotation: {x: 0.078497596, y: -0.004691495, z: -0.0045781904, w: 0.9968928}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1.0000006}
+    - name: Elemental
+      parentName: MagmaElementalUnity(Clone)
+      position: {x: -0, y: 0.2898848, z: 0}
+      rotation: {x: -0.000008705919, y: 0.7071067, z: 0.7071068, w: 0.000008489066}
+      scale: {x: 5.1912313, y: 5.2431464, z: 5.19123}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

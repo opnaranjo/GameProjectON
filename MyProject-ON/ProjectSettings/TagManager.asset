@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Coin
+  - Portal
+  - Portal1
+  - Map
+  - Enemy
+  - Trap
   layers:
   - Default
   - TransparentFX
