@@ -63,6 +63,7 @@
     <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Scripts/EnemyInteraction.cs" />
     <Compile Include="Assets/VLights/Scripts/PostProcess/VLightInterleavedSampling.cs" />
+    <Compile Include="Assets/Scripts/Enemy.cs" />
     <Compile Include="Assets/Scripts/SingletonCanvas.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/MouseMovPlayer.cs" />
     <Compile Include="Assets/Scripts/SingletonSound.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets/VLights/Scripts/Util/ShaderLibrary.cs" />
     <Compile Include="Assets/VLights/Scripts/VLight/VLight.cs" />
     <Compile Include="Assets/Scripts/MenuMain.cs" />
+    <Compile Include="Assets/Scripts/EnemyMagma.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

@@ -3,31 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("Game Resources and Controls")]
+    [Header("---------------------------")]
     [SerializeField] private AudioSource audioSource;
     private float timeElapsed;
+
+    [Header("---------------------------")]
+    [Header("Health Bar Components")]
     [SerializeField] private TMP_Text texttimerClock;
     [SerializeField] private TMP_Text textLifes;
     [SerializeField] private TMP_Text textHealth;
+    [SerializeField] private TMP_Text textCoins;
+    [SerializeField] private TMP_Text textMaps;
 
-    //[SerializeField]
-    public float maxHealthPlayer;
-    //[SerializeField]
-    public float healthCurrentPlayer;
-    //[SerializeField]
-    public int lifesPlayer;
-    //[SerializeField]
-    //public int continuesPlayer;
-    //[SerializeField]
+
+    [Header("---------------------------")]
+    [Header("Collected Items")]
     public int collectedMaps = 0;
-    //[SerializeField]
     public int collectedCoins = 0;
+
+    [Header("---------------------------")]
+    [Header("Health Bar Components")]
+    [SerializeField] private Image imageHealthBar;
+    public float maxHealthPlayer;
+    public float healthCurrentPlayer;
+    public int lifesPlayer;
     public bool isDead;
+
+    [Header("---------------------------")]
+    [Header("Pause Menu")]
     public bool isPaused;
+    public GameObject pauseMenu;
+    public GameObject hudMenu;
 
     // Time Elapsed
     private int minutes, seconds, cents;
@@ -51,9 +65,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         lifesPlayer = 3;
-        //continuesPlayer = 2;
-        maxHealthPlayer = 10;
-        healthCurrentPlayer = 5;
+        maxHealthPlayer = 100;
+        healthCurrentPlayer = 50;
     }
 
     // Update is called once per frame
@@ -63,7 +76,10 @@ public class GameManager : MonoBehaviour
         {
             ClockRunning();
             MenuValues();
+            
         }
+
+        TogglePause();
 
     }
 
@@ -80,6 +96,9 @@ public class GameManager : MonoBehaviour
     {
         textLifes.text = Convert.ToString(lifesPlayer);
         textHealth.text = Convert.ToString(Math.Round(healthCurrentPlayer,2));
+        textCoins.text = "X " + Convert.ToString(collectedCoins);
+        textMaps.text = Convert.ToString(collectedMaps) + " X";
+        imageHealthBar.fillAmount = healthCurrentPlayer / maxHealthPlayer; 
     }
 
     // ---------------------------------
@@ -97,7 +116,41 @@ public class GameManager : MonoBehaviour
     }
     // ---------------------------------
 
+    public void TogglePause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        { 
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
 
-    
-    
+    }
+
+    void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        isPaused = true;
+        hudMenu.SetActive(false);
+        Time.timeScale = 0; // Tambien puede relentizar el juego (ejemplo: 0.01f)
+    }
+
+    void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+        isPaused = false;
+        hudMenu.SetActive(true);
+        Time.timeScale = 1;
+    }
+
+    public void BackMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }

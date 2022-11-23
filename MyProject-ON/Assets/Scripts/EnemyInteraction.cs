@@ -32,6 +32,7 @@ public class EnemyInteraction : MonoBehaviour
     private bool flagLookEnemy = false;
     private bool flagLigthDamage = false;
     private GameManager gameManager;
+    private EnemyMagma enemyMagma;
 
     // Start is called before the first frame update
     void Start()
@@ -67,7 +68,8 @@ public class EnemyInteraction : MonoBehaviour
             case EnemyType.EnemyOne:
                 flagLookEnemy = true;
                 flagLigthDamage = true;
-
+                enemyDamage = enemyMagma.AttackEnemy();
+                //Debug.Log("Attack: " + enemyMagma.AttackEnemy());
                 break;
             case EnemyType.EnemyTwo:
                 flagLookEnemy = false;

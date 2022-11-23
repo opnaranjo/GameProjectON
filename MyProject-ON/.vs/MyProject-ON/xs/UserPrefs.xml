@@ -1,22 +1,28 @@
 ﻿<Properties StartupConfiguration="{C910001F-77E4-F3B6-69DF-48B608188AD2}|">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyInteraction.cs">
     <Files>
-      <File FileName="Assets/Scripts/MovPlayer.cs" Line="5" Column="23" />
-      <File FileName="Assets/Scripts/InteractionPlayer.cs" Line="193" Column="12" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RaycastFire.cs" Line="20" Column="9" />
-      <File FileName="Assets/Scripts/EnemyMov.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyInteraction.cs" Line="30" Column="31" />
-      <File FileName="Assets/Scripts/PlayerMovFeet.cs" Line="27" Column="18" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="153" Column="35" />
+      <File FileName="Assets/Scripts/EnemyMov.cs" Line="39" Column="129" />
+      <File FileName="Assets/Scripts/EnemyInteraction.cs" Line="72" Column="19" />
+      <File FileName="Assets/Scripts/PlayerInteraction.cs" />
+      <File FileName="Assets/Scripts/PlayerMovFeet.cs" />
+      <File FileName="Assets/Scripts/OtherScripts/MouseMovPlayer.cs" Line="35" Column="30" />
+      <File FileName="Assets/Scripts/MenuMain.cs" Line="7" Column="1" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="7" Column="36" />
+      <File FileName="Assets/Scripts/EnemyMagma.cs" Line="12" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyProject-ON" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="OtherScripts" expanded="True" />
+              </Node>
               <Node name="VLights" expanded="True">
                 <Node name="Editor" expanded="True" />
               </Node>
@@ -26,9 +32,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="43db6bc8-a129-4c9f-a819-a01682af4b5f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="378bd758-99f6-4953-87c4-125da004def3" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
