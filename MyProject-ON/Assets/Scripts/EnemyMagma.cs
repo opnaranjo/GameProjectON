@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class EnemyMagma : Enemy
 {
-    
-
-    public override float AttackEnemy()
+    protected override void Introduction()
     {
-        return base.enemyDamage * 2;
+        //base.Introduction();
+        Debug.Log("Hi This is Mr. EnemyMagma!");
     }
+
+    protected override void Move()
+    {
+        base.Move();
+    }
+
+    protected override void Attack()
+    {
+
+    }
+
 }

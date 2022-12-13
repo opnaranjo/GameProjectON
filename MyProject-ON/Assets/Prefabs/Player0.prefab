@@ -1594,7 +1594,6 @@ MonoBehaviour:
   timer: 0
   limitTimer: 2
   limitFloor: -10
-  waitHealing: 4.5
 --- !u!114 &1278659114916172884
 MonoBehaviour:
   m_ObjectHideFlags: 0

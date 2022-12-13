@@ -1,25 +1,23 @@
 ﻿<Properties StartupConfiguration="{C910001F-77E4-F3B6-69DF-48B608188AD2}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b469aea6-7380-47c3-80f1-807c93a31615" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyInteraction.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuController.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="153" Column="35" />
-      <File FileName="Assets/Scripts/EnemyMov.cs" Line="39" Column="129" />
-      <File FileName="Assets/Scripts/EnemyInteraction.cs" Line="72" Column="19" />
-      <File FileName="Assets/Scripts/PlayerInteraction.cs" />
-      <File FileName="Assets/Scripts/PlayerMovFeet.cs" />
-      <File FileName="Assets/Scripts/OtherScripts/MouseMovPlayer.cs" Line="35" Column="30" />
-      <File FileName="Assets/Scripts/MenuMain.cs" Line="7" Column="1" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="7" Column="36" />
-      <File FileName="Assets/Scripts/EnemyMagma.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/PlayerInteraction.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="114" Column="13" />
+      <File FileName="Assets/Scripts/EventManager.cs" Line="35" Column="24" />
+      <File FileName="Assets/Scripts/MenuController.cs" Line="58" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyProject-ON" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="GUI Items" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="OtherScripts" expanded="True" />
               </Node>
@@ -32,7 +30,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="378bd758-99f6-4953-87c4-125da004def3" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
 </Properties>

@@ -21,24 +21,26 @@ public class EnemyInteraction : MonoBehaviour
 
     public Transform posPlayer;
     public GameObject ligthVision;
-    public float enemyDamage = 0.01f;
+    
     //public float speedMov = 3f;
     public float speedLook = 3;
     public float maxDistance = 25f;
+    public float enemyDamage = 0.1f;
     //public float raycastRange = 60f;
 
 
     //private bool flagMovEnemy = false;
     private bool flagLookEnemy = false;
     private bool flagLigthDamage = false;
+    
     private GameManager gameManager;
-    private EnemyMagma enemyMagma;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
         SetEnemyBehaviour(tipoEnemigo);
+        Debug.Log("Attack enemy: " + enemyDamage);
     }
 
     // Update is called once per frame
@@ -48,7 +50,8 @@ public class EnemyInteraction : MonoBehaviour
         {
             if (flagLookEnemy)
             {
-                LookAtPlayerLerp(this.gameObject);
+                //LookAtPlayerLerp(this.gameObject);
+                LookAtPlayerLerp(gameObject);
             }
 
             if (flagLigthDamage)
@@ -68,8 +71,6 @@ public class EnemyInteraction : MonoBehaviour
             case EnemyType.EnemyOne:
                 flagLookEnemy = true;
                 flagLigthDamage = true;
-                enemyDamage = enemyMagma.AttackEnemy();
-                //Debug.Log("Attack: " + enemyMagma.AttackEnemy());
                 break;
             case EnemyType.EnemyTwo:
                 flagLookEnemy = false;
@@ -90,14 +91,14 @@ public class EnemyInteraction : MonoBehaviour
         {
             ligthVision.SetActive(true);
             RaycastHit hit;
-            Debug.Log("LightDamage - raycast ");
+            //Debug.Log("LightDamage - raycast ");
             //if (Physics.Raycast(ligthVision.transform.position, ligthVision.transform.forward, out hit, raycastRange))
             //if (Physics.Raycast(transform.position, transform.forward, out hit, range))
             if(Physics.Linecast(ligthVision.transform.position, posPlayer.transform.position, out hit))
             {
                 //Debug.Log("Entra - Raycast: ");
-                Debug.Log("LightDamage - Raycast: " + hit.transform.gameObject);
-                if (hit.transform.gameObject.tag == "Player")
+                //Debug.Log("LightDamage - Raycast: " + hit.transform.gameObject);
+                if (hit.transform.gameObject.CompareTag("Player"))
                 {
                     playerInteraction.DamagePlayer(enemyDamage);
 

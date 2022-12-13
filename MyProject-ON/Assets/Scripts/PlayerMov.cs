@@ -14,9 +14,9 @@ public class PlayerMov : MonoBehaviour
     private Rigidbody rb; // Para controlar la animación de salto
     private float x, y;
     private Animator anim;
-    private Vector3 startPosition;
-    private Quaternion startRotation;
-    private Vector3 startScale;
+    //private Vector3 startPosition;
+    //private Quaternion startRotation;
+    //private Vector3 startScale;
     private int movIndex;
     private GameManager gameManager;
 
@@ -30,9 +30,10 @@ public class PlayerMov : MonoBehaviour
         //RigidBody Player
         rb = GetComponent<Rigidbody>();
         jumped = false;
-        startPosition = transform.position;
-        startRotation = transform.rotation;
-        startScale = transform.localScale;
+
+        //startPosition = transform.position;
+        //startRotation = transform.rotation;
+        //startScale = transform.localScale;
         movIndex = 1;
 }
 
