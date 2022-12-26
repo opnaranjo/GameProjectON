@@ -1,9 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 //using UnityEngine.SceneManagement;
 //using UnityEngine.UIElements;
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Resources and Controls")]
     [SerializeField] private AudioSource audioSource;
+    public int numScene;
 
     [Header("---------------------------")]
     [Header("Canvas Player Values")]
@@ -34,7 +35,6 @@ public class GameManager : MonoBehaviour
     public int lifesPlayer;
     public bool isDead;
     public bool isPaused;
-    public int numScene;
 
     [Header("---------------------------")]
     [Header("Collected Items")]
@@ -44,10 +44,11 @@ public class GameManager : MonoBehaviour
 
     // Time Elapsed
     private float timeElapsed;
+    private GameObject portal;
     private int minutes, seconds, cents;
+    //GameManager gameManagerScript;
 
-
-    // Start is called before the first frame update
+    
     private void Awake()
     {
         if(GameManager.instance == null)
@@ -62,28 +63,23 @@ public class GameManager : MonoBehaviour
 
     }
 
+    // Start is called before the first frame update
     void Start()
     {
-        //lifesPlayer = 2;
-        maxHealthPlayer = 100;
-
-        healthPlayer = maxHealthPlayer;
+        SetStartValues();
         sliderHealth.value = CalculateHealth();
-
+        //portal = GameObject.FindGameObjectWithTag("Portal1");
+        portal = GameObject.Find("PortKey");
+        portal.SetActive(false);
+        Debug.Log("Portal: " + portal);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //portal = GameObject.Find("PortKey"); 
         numScene = SceneManager.GetActiveScene().buildIndex;
         sliderHealth.value = CalculateHealth();
-
-        /*
-        if (healthPlayer < maxHealthPlayer)
-        {
-            healthBarUI.SetActive(true);
-        }
-        */
 
         if (healthPlayer > maxHealthPlayer)
         {
@@ -118,11 +114,22 @@ public class GameManager : MonoBehaviour
 
         TogglePauseMusic();
 
-
+        if (collectedMaps >= 1)
+        {
+            portal = GameObject.FindGameObjectWithTag("Portal"); //.SetActive(true);
+            //renderers = goPlayer.GetComponentsInChildren<Renderer>();
+        }
     }
 
    
     // --------------------------------
+
+    public void SetStartValues()
+    {
+        lifesPlayer = 2;
+        maxHealthPlayer = 100;
+        healthPlayer = maxHealthPlayer;
+    }
 
     public void TogglePauseGame()
     {
@@ -186,5 +193,45 @@ public class GameManager : MonoBehaviour
     {
         instance.audioSource.UnPause();
     }
+
+
+    public void RestoreAllHealth()
+    {
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        gameManager.healthPlayer = gameManager.maxHealthPlayer;
+        //Debug.Log("Entra a RestoreAllHealth ====>   " + gameObject.activeInHierarchy);
+    }
+
+
+    public void HealingPlayer(float amounHealing)
+    {
+        healthPlayer += amounHealing;
+        if (healthPlayer > maxHealthPlayer)
+        {
+            healthPlayer = maxHealthPlayer;
+        }
+    }
+
+
+    public void DamagePlayer(float amount) // Damage by amount
+    {
+        healthPlayer -= amount;
+        if (healthPlayer <= 0)
+        {
+            healthPlayer = 0;
+            SubstractLife();
+        }
+    }
+
+    void SubstractLife()
+    {
+        lifesPlayer--;
+
+        if (lifesPlayer <= 0)
+        {
+            lifesPlayer = 0;
+        }
+    }
+
 
 }

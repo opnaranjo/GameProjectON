@@ -710,7 +710,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7551822018690367274}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
   m_Speed: 3.5
@@ -725,43 +725,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &392555131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7551822018690367274}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02df691c30a2045978b5b840fe11caa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navMeshAgent: {fileID: 392555130}
-  player: {fileID: 0}
-  destinations:
-  - {fileID: 0}
-  - {fileID: 0}
-  distanceToFollowPlayer: 5
---- !u!114 &392555138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7551822018690367274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8ad9c3d6c44a4c498eb462f80b1c17c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInteraction: {fileID: 0}
-  tipoEnemigo: 0
-  posPlayer: {fileID: 0}
-  ligthVision: {fileID: 1841223872}
-  speedLook: 3
-  maxDistance: 25
-  enemyDamage: 0.1
 --- !u!114 &392555139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,11 +738,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Magma
-  moveSpeed: 2
+  healthPoint: 0
   maxHealthPoint: 100
-  distance: 3
+  damage: 0.5
   healthBarUI: {fileID: 5041055956049522962}
   slider: {fileID: 8320888297796559521}
+  gameManager: {fileID: 5067253785196125963, guid: 8b6911ea257234515a570793ab8da536, type: 3}
+  moveSpeed: 2
+  navMeshAgent: {fileID: 392555130}
+  player: {fileID: 0}
+  destinations:
+  - {fileID: 0}
+  - {fileID: 0}
+  distanceToFollowPlayer: 5
+  maxDistance: 25
+  ligthVision: {fileID: 1841223872}
 --- !u!4 &7551822018690458440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400044, guid: 5b4f683135a567640ac836e07189673d, type: 3}

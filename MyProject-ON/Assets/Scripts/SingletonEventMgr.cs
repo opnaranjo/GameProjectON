@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingletonMenuCtrl : MonoBehaviour
+public class SingletonEventMgr : MonoBehaviour
 {
-    public static SingletonMenuCtrl instance;
+    public static SingletonEventMgr instance;
 
     private void Awake()
     {
-        if (SingletonMenuCtrl.instance == null)
+        if (SingletonEventMgr.instance == null)
         {
-            SingletonMenuCtrl.instance = this;
+            SingletonEventMgr.instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else

@@ -24,7 +24,7 @@ public class PlayerMov : MonoBehaviour
     void Start()
     {
         // Get GameManager
-        gameManager = FindObjectOfType<GameManager>();
+        //gameManager = FindObjectOfType<GameManager>();
         // Get Animator
         anim = GetComponent<Animator>();
         //RigidBody Player
@@ -40,6 +40,11 @@ public class PlayerMov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (gameManager == null)
+        { 
+            gameManager = FindObjectOfType<GameManager>();
+        }
 
         if (!gameManager.isDead)
         {
@@ -103,6 +108,11 @@ public class PlayerMov : MonoBehaviour
     // Estandariza el tiempo de transición entre cada cuadro no importa el equipo en el que corra el juego
     void FixedUpdate()
     {
+        if (gameManager == null)
+        {
+            gameManager = FindObjectOfType<GameManager>();
+        }
+
         if (!gameManager.isDead)
         {
             transform.Rotate(0, x * Time.deltaTime * speedRot[movIndex], 0);

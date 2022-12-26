@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: a3b059e8cf7b54decaed350527a12ba5
   - enabled: 1
-    path: Assets/Scenes/Scene1.unity
+    path: Assets/Scenes/Scene0.unity
+    guid: e7e431f01cda6455489ba414183fd5d7
+  - enabled: 1
+    path: Assets/Scenes/Scene1Backup.unity
     guid: 338f0c41a3b6d4173818f57d565b6280
   - enabled: 1
-    path: Assets/Scenes/Scene2.unity
+    path: Assets/Scenes/Scene2backup.unity
     guid: bea93d346fb7345f8b285fc0a1796c0d
   m_configObjects: {}

@@ -1,9 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+//using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
+//using static UnityEditor.Progress;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -11,7 +11,6 @@ public class PlayerInteraction : MonoBehaviour
     public float limitTimer = 3f;
     public float limitFloor = -10;
 
-    public float blinkDelay = 1.25f;
     //public float blinkWait = 3.5f;
     //public float waitHealing = 4.5f;
     //public float waitRespawn = 3.5f;
@@ -21,8 +20,11 @@ public class PlayerInteraction : MonoBehaviour
     private Vector3 savedScale;
     private GameManager gameManager;
     private Rigidbody rb;
-    private EventManager eventManager;
+    private GameObject goPlayer;
     private Renderer[] renderers;
+    private float blinkDelay = 0.5f;
+    //private EventManager eventManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +34,26 @@ public class PlayerInteraction : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         //RigidBody Player
         rb = GetComponent<Rigidbody>();
-        renderers = GetComponentsInChildren<Renderer>();
-        gameManager.isDead = false;
-        eventManager = FindObjectOfType<EventManager>();
+
+        //gameManager.isDead = false;
+
+        /*
+        goPlayer = GameObject.FindWithTag("Player");
+
+        if (goPlayer != null)
+        {
+
+            //PlayerInteraction playerScript = goPlayer.GetComponent<PlayerInteraction>();
+            renderers = goPlayer.GetComponentsInChildren<Renderer>();
+
+            //if (playerScript != null)
+            //{
+
+            // Do relevant stuff here
+
+            //}
+        }
+        */
     }
 
     // Update is called once per frame
@@ -44,12 +63,10 @@ public class PlayerInteraction : MonoBehaviour
         // Respawn player if fall 
         if (transform.position.y < limitFloor)
         {
-            DamagePlayer(gameManager.maxHealthPlayer);
+            gameManager.DamagePlayer(gameManager.maxHealthPlayer);
             Respawn();
-            HealingPlayer(gameManager.maxHealthPlayer);
+            gameManager.HealingPlayer(gameManager.maxHealthPlayer);
         }
-
-
     }
     
     void OnTriggerEnter(Collider col)
@@ -75,13 +92,13 @@ public class PlayerInteraction : MonoBehaviour
 
             if (col.transform.gameObject.CompareTag("Trap"))
             {
-                DamagePlayer();
+                gameManager.DamagePlayer(1);
             }
 
             if (col.transform.gameObject.CompareTag("Enemy"))
             {
 
-                DamagePlayer();
+                gameManager.DamagePlayer(1);
             }
         }
 
@@ -109,117 +126,6 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    public void Blink()
-    {
-        StartCoroutine(BlinkPlayer(blinkDelay));
-        //StartCoroutine(Function(3.0f));
-    }
-
-    public IEnumerator BlinkPlayer(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        foreach (var rend in renderers)
-        {
-            rend.enabled = false;
-
-        }
-        /*
-        // tiempo espera
-        timer += Time.deltaTime;
-        if (timer >= limitTimer)
-        {
-
-            timer = 0;
-        }
-        */
-        yield return new WaitForSeconds(delay);
-
-        foreach (var rend in renderers)
-        {
-            rend.enabled = true;
-
-        }
-        //yield return new WaitForSeconds(delay);
-
-    } 
-        
-    public void RestoreAllHealth()
-    {
-        gameManager.healthPlayer = gameManager.maxHealthPlayer;
-    }
-
-    public void Hello()
-    {
-        Debug.Log("Hello method PlayerInteraction.cs");
-    }
-
-    public void Bye()
-    {
-        Debug.Log("Bye method PlayerInteraction.cs");
-    }
-
-    public void Other()
-    {
-        Debug.Log("Other method PlayerInteraction.cs");
-    }
-
-    void HealingPlayer() // Healing by one
-    {
-        if (gameManager.lifesPlayer > 0)
-        {
-            gameManager.healthPlayer++;
-            if (gameManager.healthPlayer > gameManager.maxHealthPlayer)
-            {
-                gameManager.healthPlayer = gameManager.maxHealthPlayer;
-            }
-        }
-
-    }
-
-    void HealingPlayer(float amounHealing)
-    {
-        if (gameManager.lifesPlayer > 0)
-        {
-            gameManager.healthPlayer += amounHealing;
-            if (gameManager.healthPlayer > gameManager.maxHealthPlayer)
-            {
-                gameManager.healthPlayer = gameManager.maxHealthPlayer;
-            }
-        }
-
-    }
-
-    void DamagePlayer() // Damage by one
-    {
-        gameManager.healthPlayer--;
-        if (gameManager.healthPlayer <= 0)
-        {
-            gameManager.healthPlayer = 0;
-            RestLife();
-        }
-    }
-
-    public void DamagePlayer(float amount) // Damage by amount
-    {
-        gameManager.healthPlayer -= amount;
-        if (gameManager.healthPlayer <= 0)
-        {
-            gameManager.healthPlayer = 0;
-            RestLife();
-        }
-    }
-
-    void RestLife()
-    {
-        gameManager.lifesPlayer--;
-
-        if (gameManager.lifesPlayer <= 0)
-        { 
-            gameManager.lifesPlayer = 0;
-        }
-    }
-
     void SaveTransform()
     {
         savedPosition = transform.position;
@@ -236,7 +142,67 @@ public class PlayerInteraction : MonoBehaviour
         // Remove force RigibBody
         rb.velocity = Vector3.zero;
         //Debug.Log("Entra Respawn");
+    }
 
+    public void Blink()
+    {
+
+        //MonoBehaviour camMono = Camera.main.GetComponent<MonoBehaviour>();
+
+        goPlayer = GameObject.FindWithTag("Player");
+
+        if (goPlayer != null)
+        {
+
+            PlayerInteraction playerScript = goPlayer.GetComponent<PlayerInteraction>();
+            //renderers = goPlayer.GetComponentsInChildren<Renderer>();
+
+            if (playerScript != null)
+            {
+                //Debug.Log("Entra a playerScript::: " + playerScript);
+                playerScript.StartCoroutine(BlinkObject(blinkDelay));
+                //goPlayer.SetActive(true);
+
+            }
+        }
+        
+
+        
+        //Debug.Log("Entra a Blink" + goPlayer);
+        //StartCoroutine(Function(3.0f));
+    }
+
+    public IEnumerator BlinkObject(float delay)
+    {
+
+
+        //goPlayer = GameObject.FindWithTag("Player");
+
+        //Debug.Log("Entra a IEnumerator Blink" + goPlayer);
+
+        if (goPlayer != null)
+        {
+            renderers = goPlayer.GetComponentsInChildren<Renderer>();
+
+            if (renderers.Length != 0)
+            {
+
+                yield return new WaitForSeconds(delay);
+
+                foreach (var rend in renderers)
+                {
+                    rend.enabled = false;
+                }
+
+                yield return new WaitForSeconds(delay);
+
+                foreach (var rend in renderers)
+                {
+                    rend.enabled = true;
+                }
+
+            }
+        }
 
     }
 }

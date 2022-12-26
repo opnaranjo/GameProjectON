@@ -10,6 +10,7 @@ TagManager:
   - Map
   - Enemy
   - Trap
+  - Portal2
   layers:
   - Default
   - TransparentFX

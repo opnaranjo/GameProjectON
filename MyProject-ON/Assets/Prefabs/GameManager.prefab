@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  numScene: 0
   textClock: {fileID: 0}
   textNumLifes: {fileID: 0}
   textNumHealth: {fileID: 0}
@@ -53,8 +54,8 @@ MonoBehaviour:
   textMaps: {fileID: 0}
   sliderHealth: {fileID: 0}
   maxHealthPlayer: 100
-  healthPlayer: 0
-  lifesPlayer: 1
+  healthPlayer: 100
+  lifesPlayer: 2
   isDead: 0
   isPaused: 0
   collectedMaps: 0

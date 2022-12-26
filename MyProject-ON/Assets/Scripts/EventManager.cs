@@ -35,7 +35,7 @@ public class EventManager : MonoBehaviour
         if (gameManager.isPaused == true && gameManager.numScene != 0)
         {
             onPause.Invoke();
-            Debug.Log("Invocando event onPause");
+            //Debug.Log("Invocando event onPause");
         }
         else
         {
@@ -45,38 +45,21 @@ public class EventManager : MonoBehaviour
         if (gameManager.healthPlayer <= 0 && gameManager.isDead)
         {
 
-            //StartCoroutine(DeadPlayer(delayOnDead));
-            Debug.Log("Invocando event onDead");
-
-            onBlink.Invoke();
-            Debug.Log("Invocando event onBlink");
-
-            
-
             if (gameManager.lifesPlayer == 0)
             {
                 onGameOver.Invoke();
-                Debug.Log("Invocando event onResume");
+                Debug.Log("Invocando event onGameOver");
+            }
+            else
+            {
+                StartCoroutine(BlinkPlayer(delayOnDead));
+                //Debug.Log("Invocando event onBlink");
+
+                StartCoroutine(DeadPlayer(delayOnDead));
+                //Debug.Log("Invocando event onDead");
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Debug.Log("Invocando event onPause");
-            onPause.Invoke();
-        }
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Debug.Log("Invocando event onResume");
-            onResume.Invoke();
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Debug.Log("Invocando event onOther");
-            onOther.Invoke();
-        }
     }
 
     public IEnumerator DeadPlayer(float delay)
@@ -86,4 +69,10 @@ public class EventManager : MonoBehaviour
         
     }
 
+    public IEnumerator BlinkPlayer(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        onBlink.Invoke();
+
+    }
 }

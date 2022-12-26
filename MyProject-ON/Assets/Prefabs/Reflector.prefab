@@ -329,13 +329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tipoEnemigo: 0
-  posJugador: {fileID: 0}
-  happyFace: {fileID: 0}
-  ungryFace: {fileID: 0}
-  agent: {fileID: 8469172166740464954}
-  speedMov: 2
-  speedLook: 2
-  maxDistance: 20
+  posPlayer: {fileID: 0}
+  enemyDamage: 0.1
 --- !u!1 &8469172166768311030
 GameObject:
   m_ObjectHideFlags: 0

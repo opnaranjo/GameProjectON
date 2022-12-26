@@ -56,31 +56,41 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/MonoBundle/Addins/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/EnemyMov.cs" />
+    <Compile Include="Assets/Scripts/OtherScripts/EnemyMov.cs" />
     <Compile Include="Assets/Scripts/SingletonMenuCtrl.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/Player.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/ScritpJugador.cs" />
+    <Compile Include="Assets/Scripts/SingletonEventSys.cs" />
     <Compile Include="Assets/Scripts/PlayerMov.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Scripts/SingletonEventMgr.cs" />
     <Compile Include="Assets/Scripts/EnemyMagma.cs" />
-    <Compile Include="Assets/Scripts/EnemyInteraction.cs" />
+    <Compile Include="Assets/Scripts/OtherScripts/EnemyInteraction.cs" />
     <Compile Include="Assets/VLights/Scripts/PostProcess/VLightInterleavedSampling.cs" />
+    <Compile Include="Assets/Models/MagicMirror/Prefab/MirrorScript.cs" />
     <Compile Include="Assets/Scripts/Enemy.cs" />
+    <Compile Include="Assets/Models/Zombie_LP/Scripts/ZombieFree.cs" />
     <Compile Include="Assets/Scripts/SingletonUI.cs" />
+    <Compile Include="Assets/Models/MagicMirror/Prefab/MirrorCameraScript.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/MouseMovPlayer.cs" />
     <Compile Include="Assets/Scripts/SingletonSound.cs" />
+    <Compile Include="Assets/Models/MagicMirror/Prefab/MirrorReflectionScript.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/Granada.cs" />
+    <Compile Include="Assets/Models/Zombie_LP/Scripts/ZombieCameraLogic.cs" />
     <Compile Include="Assets/Scripts/CamerasControl.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/Bala.cs" />
     <Compile Include="Assets/Scripts/PlayerInteraction.cs" />
     <Compile Include="Assets/VLights/Scripts/Util/VLightShaderUtil.cs" />
+    <Compile Include="Assets/Models/Zombie_LP/Scripts/ZombieCharacterControl.cs" />
     <Compile Include="Assets/VLights/Scripts/Util/VLightGeometryUtil.cs" />
+    <Compile Include="Assets/Models/LowPolyDungeon/Demo Scenes/ScreenshotMaker.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/Lanzador.cs" />
+    <Compile Include="Assets/Models/LowPolyDungeon/Demo Scenes/PlayerMovement.cs" />
     <Compile Include="Assets/VLights/Scripts/Util/GenerateNoiseTexture.cs" />
     <Compile Include="Assets/Scripts/EventManager.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/RaycastFire.cs" />
     <Compile Include="Assets/VLights/Scripts/VLight/VLightManager.cs" />
+    <Compile Include="Assets/Models/LowPolyDungeon/Demo Scenes/MouseCamLook.cs" />
     <Compile Include="Assets/VLights/Scripts/VLight/VLightHelper.cs" />
     <Compile Include="Assets/VLights/Scripts/Demo/MouseOrbitDemo.cs" />
     <Compile Include="Assets/Scripts/PlayerMovFeet.cs" />
@@ -88,20 +98,26 @@
     <Compile Include="Assets/VLights/Scripts/Util/ShaderLibrary.cs" />
     <Compile Include="Assets/VLights/Scripts/VLight/VLight.cs" />
     <Compile Include="Assets/Scripts/OtherScripts/ChangeColor.cs" />
+    <Compile Include="Assets/Scripts/EnemySkull.cs" />
     <Compile Include="Assets/Scripts/MenuController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/VLights/Shaders/Light/Legacy/VolumeLightArea.shader" />
+    <None Include="Assets/Models/Zombie_LP/Shaders/Legacy/CelShader.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/Models/MagicMirror/Prefab/Readme.txt" />
     <None Include="Assets/VLights/Shaders/Light/VLightHelperArea.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
     <None Include="Assets/VLights/Readme.txt" />
+    <None Include="Assets/Models/MagicMirror/Prefab/MirrorShader.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/VLights/Shaders/Light/Legacy/VolumeLightOrthographic.shader" />
     <None Include="Assets/VLights/Shaders/Common/RenderDepth.shader" />
+    <None Include="Assets/Models/MagicMirror/Prefab/MirrorShaderBumpMap.shader" />
+    <None Include="Assets/Models/Zombie_LP/Shaders/SupercyanShader.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/VLights/Shaders/PostProcess/Blur.shader" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
@@ -110,6 +126,7 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+    <None Include="Assets/Models/MagicMirror/Prefab/MirrorShaderOld.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
     <None Include="Assets/VLights/Shaders/PostProcess/VolumeLightInterleavedComposite.shader" />
     <None Include="Assets/VLights/Shaders/PostProcess/SimpleComposite.shader" />
@@ -121,6 +138,7 @@
     <None Include="Assets/VLights/Shaders/Light/VLightHelperPoint.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets/VLights/Shaders/Common/DownscaleDepth.shader" />
+    <None Include="Assets/Models/Zombie_LP/Shaders/SupercyanShaderLighting.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
